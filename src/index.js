@@ -2,6 +2,28 @@
 var Alexa = require('alexa-sdk');
 var APP_ID = undefined;  // TODO replace with your app ID (OPTIONAL).
 
+
+var MojioClientLite = require("MojioClientLite");
+
+var config = {
+    application: "088251a7-b45c-489b-829f-b6b71eefa6ae",
+    secret:"a763860a-9067-4521-8905-6250ee0d6951"
+};
+
+var mojio_client = new MojioClientLite(config);
+
+mojio_client.authorize('disavowed10@gmail.com','fernieLand69').then(function(res,err) {
+
+    if(typeof(err)!="undefined")
+    {
+        console.log("login error");
+        return;
+    }
+
+    // login successful
+    // write your logic here
+});
+
 var languageStrings = {
     "en-GB": {
         "translation": {
