@@ -2,7 +2,6 @@
 var Alexa = require('alexa-sdk');
 var APP_ID = undefined;  // TODO replace with your app ID (OPTIONAL).
 
-
 var MojioClientLite = require('mojio-client-lite');
 
 var config = {
@@ -22,6 +21,12 @@ mojio_client.authorize('disavowed10@gmail.com','fernieLand69').then(function(res
 
     // login successful
     // write your logic here
+
+    mojio_client.get().mojios().then(function(res,err){
+        // if err is null then data will be inside res
+	console.log(res.Data[0]);
+    });
+
 });
 
 var languageStrings = {
