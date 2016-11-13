@@ -2,6 +2,46 @@
 var Alexa = require('alexa-sdk');
 var APP_ID = undefined;  // TODO replace with your app ID (OPTIONAL).
 
+var MojioClientLite = require('mojio-client-lite');
+
+var config = {
+    application: "088251a7-b45c-489b-829f-b6b71eefa6ae",
+    secret:"a763860a-9067-4521-8905-6250ee0d6951"
+};
+
+var mojio_client = new MojioClientLite(config);
+
+mojio_client.authorize('disavowed10@gmail.com','fernieLand69').then(function(res, err) {
+
+    if (typeof(err) != "undefined") {
+        console.log("login error");
+        return;
+    }
+    
+    // car you are searching for
+    var vehicleName = "Corolla";
+
+    var vehicles;
+
+    // get vehicle data from moj.io api
+    mojio_client.get().vehicles().then(function(res, err) {
+
+	// store list of all vehicles
+	vehicles = res.Data;
+	
+	// go through the list of vehicles
+	var count = 0;
+	while (vehicles[count] != undefined) {
+	    // search through the list for a specific vehicle name
+	    if (vehicles[count].Name == vehicleName) {
+		console.log(vehicles[count]);
+	    }
+	    count++;
+	}
+    });
+
+});
+
 var languageStrings = {
     "en-GB": {
         "translation": {
