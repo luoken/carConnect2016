@@ -1,0 +1,19 @@
+{
+  "intents": [
+    {
+      "intent": "CarStatus"
+    },
+    {
+      "intent": "WhereIsMyCar"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
