@@ -11,20 +11,33 @@ var config = {
 
 var mojio_client = new MojioClientLite(config);
 
-mojio_client.authorize('disavowed10@gmail.com','fernieLand69').then(function(res,err) {
+mojio_client.authorize('disavowed10@gmail.com','fernieLand69').then(function(res, err) {
 
-    if(typeof(err)!="undefined")
-    {
+    if (typeof(err) != "undefined") {
         console.log("login error");
         return;
     }
+    
+    // car you are searching for
+    var vehicleName = "Corolla";
 
-    // login successful
-    // write your logic here
+    var vehicles;
 
-    mojio_client.get().mojios().then(function(res,err){
-        // if err is null then data will be inside res
-	console.log(res.Data[0]);
+    // get vehicle data from moj.io api
+    mojio_client.get().vehicles().then(function(res, err) {
+
+	// store list of all vehicles
+	vehicles = res.Data;
+	
+	// go through the list of vehicles
+	var count = 0;
+	while (vehicles[count] != undefined) {
+	    // search through the list for a specific vehicle name
+	    if (vehicles[count].Name == vehicleName) {
+		console.log(vehicles[count]);
+	    }
+	    count++;
+	}
     });
 
 });
