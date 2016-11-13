@@ -3,7 +3,7 @@ var Alexa = require('alexa-sdk');
 var APP_ID = undefined;  // TODO replace with your app ID (OPTIONAL).
 
 
-var MojioClientLite = require("/node_modules/mojio-client-lite/src/MojioClientLite");
+var MojioClientLite = require('mojio-client-lite');
 
 var config = {
     application: "088251a7-b45c-489b-829f-b6b71eefa6ae",
