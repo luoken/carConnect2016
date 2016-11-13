@@ -1,14 +1,37 @@
-GetNewFactIntent a fact
-GetNewFactIntent a space fact
-GetNewFactIntent tell me a fact
-GetNewFactIntent tell me a space fact
-GetNewFactIntent give me a fact
-GetNewFactIntent give me a space fact
-GetNewFactIntent tell me trivia
-GetNewFactIntent tell me a space trivia
-GetNewFactIntent give me trivia
-GetNewFactIntent give me a space trivia
-GetNewFactIntent give me some information
-GetNewFactIntent give me some space information
-GetNewFactIntent tell me something
-GetNewFactIntent give me something
+CarStatus status
+CarStatus my status
+CarStatus my car status
+CarStatus what is my car status
+CarStatus what is the status
+CarStatus what's my car status
+CarStatus what's the car status
+CarStatus what's the status
+CarStatus summary
+CarStatus my summary
+CarStatus my car summary
+CarStatus what is my car summary
+CarStatus what is my summary
+CarStatus what is the summary
+CarStatus what's my summary
+CarStatus what's the car summary
+CarStatus what's my car summary
+
+WhereIsMyCar location
+WhereIsMyCar where
+WhereIsMyCar where is my car
+WhereIsMyCar where is car
+WhereIsMyCar where's the car
+WhereIsMyCar where's my car
+WhereIsMyCar what is the location of my car
+WhereIsMyCar location of my car
+
+FuelLevel gas
+FuelLevel gas level
+FuelLevel how much gas do I have
+FuelLevel how much gas does the car have
+FuelLevel gas percent
+FuelLevel fuel
+FuelLevel fuel level
+FuelLevel how much fuel do I have
+FuelLevel how much fuel does the car have
+FuelLevel fuel percent
